@@ -11,7 +11,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
-import com.example.mysocityhub.R;
+import com.example.mysocietyhub.R;
 
 import java.util.List;
 
