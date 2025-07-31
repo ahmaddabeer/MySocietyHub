@@ -11,14 +11,13 @@
 ### 🟢 Splash Screen
 - Minimal splash screen with Lottie animation at the center.
 
-### 🔐 Login
-- Basic login screen (currently using dummy input or planned Firebase).
+
 
 ### 📑 Side Navigation Drawer
 - Easily navigate between:
   - Home
   - Gallery
-  - Other planned modules
+  
 
 ---
 
