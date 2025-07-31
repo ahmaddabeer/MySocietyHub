@@ -1,5 +1,4 @@
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -10,44 +9,43 @@
         android:layout_height="wrap_content"
         android:layout_margin="12dp"
         app:cardCornerRadius="16dp"
-        app:cardElevation="6dp"/>
+        app:cardElevation="6dp" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
         android:orientation="vertical"
-        android:padding="16dp"
-        android:gravity="center_horizontal">
+        android:padding="16dp">
 
         <!-- Lottie Animation Center Top -->
         <com.airbnb.lottie.LottieAnimationView
             android:id="@+id/lottieIcon"
             android:layout_width="96dp"
             android:layout_height="96dp"
-            android:layout_marginBottom="12dp"
             android:layout_gravity="center"
-            />
+            android:layout_marginBottom="12dp" />
 
         <!-- Text Content Below Lottie -->
         <TextView
             android:id="@+id/title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
             android:text="Electricity Info"
-            android:textSize="18sp"
-            android:textStyle="bold"
             android:textColor="#000000"
-            android:layout_marginBottom="4dp"/>
+            android:textSize="18sp"
+            android:textStyle="bold" />
 
 
     </LinearLayout>
 
-   <ListView
-       android:layout_width="match_parent"
-       android:layout_height="wrap_content"
-       android:id="@+id/fragment_home_detail_listview"
+    <ListView
+        android:id="@+id/fragment_home_detail_listview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
 
-       />
+        />
 
 
 </LinearLayout>

@@ -1,6 +1,7 @@
 package com.example.mysocietyhub.ui.gallery;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,6 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.example.mysocietyhub.R;
+import com.example.mysocietyhub.ui.home.HomeDetail;
 
 import java.util.List;
 
@@ -46,6 +48,8 @@ public class GalleryFragmentAdapter extends RecyclerView.Adapter<GalleryFragment
         Glide.with(holder.img.getContext())
                 .load(flag.getImage())
                 .into(holder.img);
+
+
 
 
     }

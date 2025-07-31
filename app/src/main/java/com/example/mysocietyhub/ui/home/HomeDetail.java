@@ -3,41 +3,36 @@ package com.example.mysocietyhub.ui.home;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Toast;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 import com.airbnb.lottie.LottieDrawable;
 import com.example.mysocietyhub.R;
-import com.example.mysocietyhub.databinding.ActivityFragmentHomeDetailBinding;
+import com.example.mysocietyhub.databinding.ActivityHomeDetailBinding;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class Fragment_Home_Detail extends AppCompatActivity {
+public class HomeDetail extends AppCompatActivity {
 
-    ActivityFragmentHomeDetailBinding binding;
+    ActivityHomeDetailBinding binding;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        binding = ActivityFragmentHomeDetailBinding.inflate(getLayoutInflater());
 
+
+
+        binding = ActivityHomeDetailBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
+        String name = getIntent().getStringExtra("item");
 
-        int positions = getIntent().getIntExtra("number", 1);
-
-        String itemName = getIntent().getStringExtra("item");
-
-
-        if (itemName.equals("Water Supply")) {
+        if (name.equals("Water Supply")) {
+            Toast.makeText(this, "Dummy details", Toast.LENGTH_SHORT).show();
 
             binding.lottieIcon.cancelAnimation();
             binding.lottieIcon.clearAnimation();
@@ -45,8 +40,7 @@ public class Fragment_Home_Detail extends AppCompatActivity {
             binding.lottieIcon.setRepeatCount(LottieDrawable.INFINITE);
             binding.lottieIcon.playAnimation();
 
-            binding.title.setText(itemName);
-
+            binding.title.setText(name);
 
             List<String> waterTimings = new ArrayList<>();
             waterTimings.add("Monday     - 6 AM to 9 AM");
@@ -60,9 +54,8 @@ public class Fragment_Home_Detail extends AppCompatActivity {
             ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, waterTimings);
             binding.fragmentHomeDetailListview.setAdapter(adapter);
 
-
-        }
-        else if (itemName.equals("Notices")) {
+        } else if (name.equals("Notices")) {
+            Toast.makeText(this, "Dummy details", Toast.LENGTH_SHORT).show();
 
             binding.lottieIcon.cancelAnimation();
             binding.lottieIcon.clearAnimation();
@@ -70,10 +63,9 @@ public class Fragment_Home_Detail extends AppCompatActivity {
             binding.lottieIcon.setRepeatCount(LottieDrawable.INFINITE);
             binding.lottieIcon.playAnimation();
 
-            binding.title.setText(itemName);
+            binding.title.setText(name);
 
             List<String> notices = new ArrayList<>();
-
             notices.add("Notice 1: Society meeting on 15th Aug at 5 PM");
             notices.add("Notice 2: Gym will be closed on Sunday");
             notices.add("Notice 3: Water tank cleaning on Friday");
@@ -89,9 +81,8 @@ public class Fragment_Home_Detail extends AppCompatActivity {
             );
             binding.fragmentHomeDetailListview.setAdapter(noticeAdapter);
 
-
-        }
-        else if (itemName.equals("Electricity Info")) {
+        } else if (name.equals("Electricity Info")) {
+            Toast.makeText(this, "Dummy details", Toast.LENGTH_SHORT).show();
 
             binding.lottieIcon.cancelAnimation();
             binding.lottieIcon.clearAnimation();
@@ -99,8 +90,7 @@ public class Fragment_Home_Detail extends AppCompatActivity {
             binding.lottieIcon.setRepeatCount(LottieDrawable.INFINITE);
             binding.lottieIcon.playAnimation();
 
-            binding.title.setText(itemName);
-
+            binding.title.setText(name);
 
             List<String> electricityInfo = new ArrayList<>();
             electricityInfo.add("Power Supply: 9 AM to 5 PM (Mon to Fri)");
@@ -118,9 +108,8 @@ public class Fragment_Home_Detail extends AppCompatActivity {
             );
             binding.fragmentHomeDetailListview.setAdapter(adapter);
 
-
-        }
-        else if (itemName.equals("Lost & Found")) {
+        } else if (name.equals("Lost & Found")) {
+            Toast.makeText(this, "Dummy details", Toast.LENGTH_SHORT).show();
 
             binding.lottieIcon.cancelAnimation();
             binding.lottieIcon.clearAnimation();
@@ -128,7 +117,7 @@ public class Fragment_Home_Detail extends AppCompatActivity {
             binding.lottieIcon.setRepeatCount(LottieDrawable.INFINITE);
             binding.lottieIcon.playAnimation();
 
-            binding.title.setText(itemName);
+            binding.title.setText(name);
 
             List<String> lostFoundItems = new ArrayList<>();
             lostFoundItems.add("Lost: Black Wallet near Gate 2 on 28th July");
@@ -146,8 +135,8 @@ public class Fragment_Home_Detail extends AppCompatActivity {
             );
             binding.fragmentHomeDetailListview.setAdapter(adapter);
 
-        }
-        else if (itemName.equals("Branches")) {
+        } else if (name.equals("Branches")) {
+            Toast.makeText(this, "Dummy details", Toast.LENGTH_SHORT).show();
 
             binding.lottieIcon.cancelAnimation();
             binding.lottieIcon.clearAnimation();
@@ -155,7 +144,7 @@ public class Fragment_Home_Detail extends AppCompatActivity {
             binding.lottieIcon.setRepeatCount(LottieDrawable.INFINITE);
             binding.lottieIcon.playAnimation();
 
-            binding.title.setText(itemName);
+            binding.title.setText(name);
 
             List<String> societyBranches = new ArrayList<>();
             societyBranches.add("Maintenance Department");
@@ -174,11 +163,10 @@ public class Fragment_Home_Detail extends AppCompatActivity {
                     android.R.layout.simple_list_item_1,
                     societyBranches
             );
-
             binding.fragmentHomeDetailListview.setAdapter(branchAdapter);
 
-        }
-        else if (itemName.equals("Maintenance Request")) {
+        } else if (name.equals("Maintenance Request")) {
+            Toast.makeText(this, "Dummy details", Toast.LENGTH_SHORT).show();
 
             binding.lottieIcon.cancelAnimation();
             binding.lottieIcon.clearAnimation();
@@ -186,9 +174,7 @@ public class Fragment_Home_Detail extends AppCompatActivity {
             binding.lottieIcon.setRepeatCount(LottieDrawable.INFINITE);
             binding.lottieIcon.playAnimation();
 
-            binding.title.setText(itemName);
-
-            //  Dummy deta
+            binding.title.setText(name);
 
             List<String> maintenanceList = new ArrayList<>();
             maintenanceList.add("Plumber - 9876543210");
@@ -205,22 +191,18 @@ public class Fragment_Home_Detail extends AppCompatActivity {
                     android.R.layout.simple_list_item_1,
                     maintenanceList
             );
-
             binding.fragmentHomeDetailListview.setAdapter(adapter);
 
-            // Click Listner to open diler
             binding.fragmentHomeDetailListview.setOnItemClickListener((parent, view, position, id) -> {
-
                 String selectedItem = maintenanceList.get(position);
-                String number = selectedItem.replaceAll("[^0-9]", ""); // extract only numbers
-
+                String number = selectedItem.replaceAll("[^0-9]", "");
                 Intent intent = new Intent(Intent.ACTION_DIAL);
                 intent.setData(Uri.parse("tel:" + number));
                 startActivity(intent);
             });
-        }
 
-        else if (itemName.equals("Emergency Contacts")) {
+        } else if (name.equals("Emergency Contacts")) {
+            Toast.makeText(this, "Dummy details", Toast.LENGTH_SHORT).show();
 
             binding.lottieIcon.cancelAnimation();
             binding.lottieIcon.clearAnimation();
@@ -228,7 +210,7 @@ public class Fragment_Home_Detail extends AppCompatActivity {
             binding.lottieIcon.setRepeatCount(LottieDrawable.INFINITE);
             binding.lottieIcon.playAnimation();
 
-            binding.title.setText(itemName);
+            binding.title.setText(name);
 
             List<String> emergencyContacts = new ArrayList<>();
             emergencyContacts.add("Police: 100");
@@ -244,30 +226,18 @@ public class Fragment_Home_Detail extends AppCompatActivity {
                     android.R.layout.simple_list_item_1,
                     emergencyContacts
             );
-
             binding.fragmentHomeDetailListview.setAdapter(contactAdapter);
 
-            // using click open diler
-
-            binding.fragmentHomeDetailListview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-                @Override
-                public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                    String selectedItem = emergencyContacts.get(position);
-
-
-                    String number = selectedItem.replaceAll("[^0-9]", "");
-
-                    // Open Diler
-
-                    Intent dialIntent = new Intent(Intent.ACTION_DIAL);
-                    dialIntent.setData(Uri.parse("tel:" + number));
-                    startActivity(dialIntent);
-                }
+            binding.fragmentHomeDetailListview.setOnItemClickListener((parent, view, position, id) -> {
+                String selectedItem = emergencyContacts.get(position);
+                String number = selectedItem.replaceAll("[^0-9]", "");
+                Intent dialIntent = new Intent(Intent.ACTION_DIAL);
+                dialIntent.setData(Uri.parse("tel:" + number));
+                startActivity(dialIntent);
             });
 
-
-        }
-        else if (itemName.equals("Avaliable Flat")) {
+        } else if (name.equals("Avaliable Flat")) {
+            Toast.makeText(this, "Dummy details", Toast.LENGTH_SHORT).show();
 
             binding.lottieIcon.cancelAnimation();
             binding.lottieIcon.clearAnimation();
@@ -275,7 +245,7 @@ public class Fragment_Home_Detail extends AppCompatActivity {
             binding.lottieIcon.setRepeatCount(LottieDrawable.INFINITE);
             binding.lottieIcon.playAnimation();
 
-            binding.title.setText(itemName);
+            binding.title.setText(name);
 
             List<String> emergencyContacts = new ArrayList<>();
             emergencyContacts.add("Police: 100");
@@ -291,16 +261,8 @@ public class Fragment_Home_Detail extends AppCompatActivity {
                     android.R.layout.simple_list_item_1,
                     emergencyContacts
             );
-
             binding.fragmentHomeDetailListview.setAdapter(contactAdapter);
-
-
-
-
-
         }
 
     }
-
-
 }

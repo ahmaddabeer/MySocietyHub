@@ -1,11 +1,11 @@
-package com.example.mysocietyhub.mainactivity;
+package com.example.mysocietyhub;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Menu;
 
 import com.airbnb.lottie.LottieDrawable;
-import com.example.mysocietyhub.R;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
 
@@ -32,16 +32,19 @@ public class MainActivity extends AppCompatActivity {
 
         setSupportActionBar(binding.appBarMain.toolbar);
 
-        binding.appBarMain.chatAnimation.setAnimation(R.raw.chat);
-        binding.appBarMain.chatAnimation.setRepeatCount(LottieDrawable.INFINITE);
-        binding.appBarMain.chatAnimation.playAnimation();
+
+//        binding.appBarMain.chatAnimation.setAnimation(R.raw.chat);
+//        binding.appBarMain.chatAnimation.setRepeatCount(LottieDrawable.INFINITE);
+//        binding.appBarMain.chatAnimation.playAnimation();
 
         binding.appBarMain.chatAnimation.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Feature is not available", Snackbar.LENGTH_LONG)
+                Snackbar.make(view, "Dummy Deta", Snackbar.LENGTH_LONG)
                         .setAction("Action", null)
                         .setAnchorView(R.id.chatAnimation).show();
+
+
 
 
 

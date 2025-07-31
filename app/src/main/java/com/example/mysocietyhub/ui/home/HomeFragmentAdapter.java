@@ -53,10 +53,12 @@ public class HomeFragmentAdapter extends RecyclerView.Adapter<HomeFragmentAdapte
             @Override
             public void onClick(View view) {
 
-                Intent intent = new Intent(context, Fragment_Home_Detail.class);
+                Intent intent = new Intent(context, HomeDetail.class);
                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                intent.putExtra("number",+1);
-                intent.putExtra("item",flag.getName());
+                intent.putExtra("position",+1);
+                intent.putExtra("item",
+                        flag.getName());
+
                 context.startActivity(intent);
 
 
