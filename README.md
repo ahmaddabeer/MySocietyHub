@@ -104,7 +104,6 @@ Categorized image gallery using runtime image URLs, shown via RecyclerView.
 
 ## 🎥 Demo Video
 
-> Record and upload your app demo video to YouTube or Google Drive, then paste the link below.
 
 **📹 Watch Demo1:** [Click Here](https://github.com/user-attachments/assets/0827297a-f607-45c1-8005-a35ec0499784)
 
