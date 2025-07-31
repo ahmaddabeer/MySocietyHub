@@ -106,7 +106,12 @@ Categorized image gallery using runtime image URLs, shown via RecyclerView.
 
 > Record and upload your app demo video to YouTube or Google Drive, then paste the link below.
 
-**📹 Watch Demo:** [Add Link Here](#)
+**📹 Watch Demo1:** [Click Here](https://github.com/user-attachments/assets/0827297a-f607-45c1-8005-a35ec0499784)
+
+
+
+
+**📹 Watch Demo2:** [Click Here](https://github.com/user-attachments/assets/6dd5357f-f729-4861-bbcf-41d5a0e2d02e)
 
 ---
 
@@ -124,7 +129,7 @@ Categorized image gallery using runtime image URLs, shown via RecyclerView.
 
 - Java (Android)
 - ViewBinding
-- Glide or Picasso (for image loading)
+- Glide  (for image loading)
 - RecyclerView
 - Lottie Animation View
 - Firebase (planned for future)
