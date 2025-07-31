@@ -1,6 +1,7 @@
 package com.example.mysocietyhub.ui.home;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -48,10 +49,26 @@ public class HomeFragmentAdapter extends RecyclerView.Adapter<HomeFragmentAdapte
                 .load(flag.getImage())
                 .into(holder.img);
 
+        holder.img.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent intent = new Intent(context, Fragment_Home_Detail.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                intent.putExtra("number",+1);
+                intent.putExtra("item",flag.getName());
+                context.startActivity(intent);
+
+
+            }
+        });
+
 
 
 
     }
+
+
 
     @Override
     public int getItemCount() {
